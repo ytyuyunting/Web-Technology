@@ -513,7 +513,7 @@
 				$city = $_POST['city'];
 				$state = $_POST['state'];
 				$address= $street.','.$city.','.$state;
-				$googleGeoUrl="https://maps.googleapis.com/maps/api/geocode/xml?address=".urlencode($address)."&key=AIzaSyA6RvecEUdcr-L2y2jhgZm4kAC48R5oztw";
+				$googleGeoUrl="https://maps.googleapis.com/maps/api/geocode/xml?address=".urlencode($address)."&key=????xxxxx";
 				try{
 				$response_xmlstr_geo = file_get_contents($googleGeoUrl);
 				}
