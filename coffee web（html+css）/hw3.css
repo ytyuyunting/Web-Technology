@@ -1,0 +1,299 @@
+    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+    html, body {
+        width: 625px;
+        height: 100%;
+        margin: auto;  
+        padding: 0;
+        overflow: hidden;
+        font-family:"Raleway";
+        color:#48267C;   
+    }
+
+    #container {
+        overflow: auto;
+        perspective: 1px; 
+        -webkit-perspective: 1px;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+    }
+
+     #top{
+        position:fixed;
+        z-index: 999;
+        height: 45px;
+        width: 610px; 
+        background-color:white;
+    }
+    .title1 {
+        font-size: 10px;
+        font-family:"Libre Baskerville";
+        font-style: italic;
+        width:40%;
+        float: left;
+        position: absolute;
+        top: 20px;
+        left: 85px;
+        width:40%; 
+        display:inline-block; 
+        float:left;
+    
+    }
+    .title2 {
+        width:60%;
+        font-family:"Raleway";
+        font-size:9px;
+        float: right;
+        position: absolute;
+        top: 13px;
+        left: 280px;
+        width:60%; 
+        display:inline-block; 
+        float:left
+    }
+    div.title2 ul{
+        list-style-type:none;
+        }
+    div.title2  ul  li
+        {
+        display:inline;
+        color: grey;
+        }
+    div#img1
+    {
+
+        height: 427px;
+        width: 610px;
+        overflow: hidden;
+        border:none; 
+        position: absolute;
+        left: -17px;
+        top: -28px; 
+        -webkit-transform: translateZ(-1.5px) scale(2.5);
+        transform: translateZ(-1.5px) scale(2.5);
+        z-index: -1;    
+    }
+    div#img2
+    {
+        height: 420px;
+        width: 610px;
+        overflow: hidden;
+        border:none;
+        position: absolute;
+        top:770px; 
+        left: -10px;
+        -webkit-transform: translateZ(-0.8px) scale(1.8);
+        transform: translateZ(-0.8px) scale(1.8);
+        z-index: -1;   
+    }
+
+    #img1 img 
+        {
+        width: 950px;
+        height: 620px;
+        margin: -75px 0 0 -175px;
+    }
+    #img2 img 
+        {
+        width: 950px;
+        height: 620px;
+        margin: -75px 0 0 -175px;
+    }
+    div#witCenter
+    {
+        width:305px;
+        height: 165px;
+        border: none; 
+        top:150px;
+        position:absolute;       
+        margin-left: 150px;
+        margin-bottom: 36px;
+        background-color: white;
+    }
+    div#witCenter .img3{
+        height:180px;
+        width: 140px;
+        margin-left: -20px;
+        margin-top:-40px;
+        overflow: hidden;
+        text-align: center center;
+        float:left;
+        position: relative;
+    }
+    div#witCenter img.women{ 
+        position: absolute;
+        margin: -5px 0 0 -5px;
+        -webkit-transform: scale(0.5);
+        transform:  scale(0.5);         
+    } 
+
+    div#witCenter ul {
+        list-style-type:none;
+        padding-left: 120px;
+        padding-top: 8px;
+        line-height: 1.1;
+    }
+    div#witCenter ul li{
+        font-size: 8px;
+        font-family:"Libre Baskerville";
+        font-style: italic;
+        line-height:1.2;
+    }
+    div#witCenter ul li+li{
+        font-size: 22px;
+        font-family:"Raleway";
+        font-style: normal;
+        font-weight: thin;
+        line-height: 1.1;
+    }
+    div#witCenter ul li+li+li{
+        font-size: 26px;
+        font-family:"Raleway";
+        font-style: normal;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+     div#witCenter ul li+li+li+li{
+        font-size: 26px;
+        font-family:"Raleway";
+        font-style: normal;
+        font-weight: bold;
+        line-height:1.5em;
+    }
+    div#witCenter ul li+li+li+li+li{
+        font-size: 12px;
+        font-family:"Raleway";
+        font-style: normal;
+        font-weight: normal;
+    }
+    div.container{
+        height: 420px;
+        width: 610px;
+        border: none; 
+        top:460px;
+        position:absolute;
+    }
+    .container .whole{
+        height:350px;
+        
+        display:inline-block; 
+        float:left;
+    }
+    .container .left{
+        width:33.33%; 
+        background-color:#5097BA;
+    }
+    .container .center{
+        width:33.33%; 
+        background-color: #48267C;
+    }
+    .container .right{
+        width:33.34%;
+        background-color:#9A69C2;
+
+    }
+
+    h5.small{
+        color:white;
+        font-size: 10px;
+        font-family:"Raleway";
+        font-style: normal;
+        font-weight: normal;
+        text-align: left;
+        padding-top: 125px;
+        padding-left: 25px;
+    }
+    span.big{
+        padding-left: 25px;
+        color: white;
+        font-size: 14px;
+        font-family:"Raleway";
+        font-weight: bold;
+    }
+    #container2{
+        clear: left; 
+        position:relative;
+        top:1100px;
+        width: 610px;
+        height:320px; 
+        background-color:#48267C;
+    }
+    .inner{
+        color: white; 
+        font-size: 10px;
+        line-height: 1.3;
+        padding-left: 60px;
+        padding-top: 55px;
+        font-family:"Raleway";
+    }
+    span.inner1{
+        font-size: 22px;
+    }
+    #footer{
+        clear: left;
+        height: 280px;
+        width: 610px;
+        top:1100px; 
+        background-color:white; 
+        position:relative;
+    }
+    div#footer ul {
+         
+        list-style-type:none;
+        padding-left: 13px;
+        padding-top: 13px;
+        font-family:"Raleway";
+        font-size: 7px;
+        line-height: 2;
+        float:left;
+        position:relative;
+        margin-top: 45px;
+        margin-left:50px;
+    }
+    div#footer ul li{
+        font-weight: bold;
+    }
+    div#footer ul li+li{
+        font-weight: normal;
+        font-size: 22px;
+    }
+    div#footer ul li+li+li{
+        font-size: 7px;
+        font-weight: normal;
+
+    }
+    div#footer ul li+li+li+li{
+        font-size: 7px;
+        font-weight: normal;
+
+    }
+    div#footer table tr td,th{
+        border:1px solid  #48267C;
+    }
+    table
+        {
+            width:253px;
+            float: right;
+            position:relative;
+            margin-top: 78px;
+            margin-right: 55px;
+            font-family:"Raleway";
+            font-size: 10px;
+            line-height: 17px;
+        }
+         .button {
+        background-color: #48267C;
+        border: none;
+        color: white;
+        padding: 5px 13px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        font-style: italic;
+        cursor: pointer;
+        position: absolute;
+        right:55px;
+        bottom:40px;
+
+    }
