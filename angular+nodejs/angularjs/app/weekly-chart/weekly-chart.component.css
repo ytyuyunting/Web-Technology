@@ -1,0 +1,50 @@
+#modal-basic-title{
+	font-weight: bold;
+}
+.modal {
+	background-color: red;
+}
+.modal-header{
+	background-color:#4986A5;
+}
+.modal-body{
+	background-color: #81CDF1;
+}
+.modal-body ul{
+	list-style-type: none;
+	line-height: 1.5;
+}
+.modal-body ul li:nth-child(1){
+	font-size: 25px;
+}
+.modal-body ul li:nth-child(2){
+	font-size: 35px;
+	margin-top: 6px;
+}
+.modal-body ul li:nth-child(2) img{
+	vertical-align: top;
+	margin-top: 5px;
+}
+.modal-body ul li:nth-child(3){
+	font-size: 17px;
+	margin-top: 6px;
+}
+.bigIcon{
+	margin-left: 330px;
+	margin-top: -100px;
+	position: absolute;
+}
+.modal-body table.datail_table{
+	margin-left: 250px;
+	font-size: 17px;
+}
+
+#detail{
+	font-size: 16px; 
+	margin-left:260px;
+	line-height: 0.8;
+}
+.modal-content{
+	margin: auto;
+	width: 500px;
+}

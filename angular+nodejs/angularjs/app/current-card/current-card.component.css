@@ -1,0 +1,39 @@
+div#card{
+		background-color: #87CEEB;
+		width: 550px;
+		height: 280px;
+		border-radius: 10px;
+		position: relative;
+		margin: 30px auto;
+	}
+#card-body{
+	background-color: #87CEEB;
+	}
+#card img.seal{
+	width: 140px;
+	height: 140px;
+	float: right;
+	position: absolute;
+	margin: -160px 350px;
+}
+#card h2 img{
+	vertical-align:top; 
+	width: 10px;
+	height: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+img{
+	width: 30px;
+	height: 30px;
+	}
+#card table{
+	position: absolute;
+	margin-left: 5px;
+	margin-top: 15px;
+	}
+#card table td{
+	width: 80px;
+	text-align: center;
+	font-size: small;
+}

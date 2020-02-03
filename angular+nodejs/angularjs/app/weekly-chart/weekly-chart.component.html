@@ -1,0 +1,32 @@
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{date |date:'dd/MM/yyyy'}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ul>
+    	<li>{{city}}</li>
+    	<li>{{detailObj?.currently?.temperature.toFixed()}}<img class="degree" src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png" style="width: 10px; height:10px">F
+    	</li>
+    	<li>{{detailObj?.currently?.summary}}</li>
+    </ul>
+	<img class="bigIcon" src="{{bigIconSrc}}" style="width: 50px; height: 50px">
+    <HR align=center width="90%" SIZE=1 color=#987cb9>
+    <div id="detail">
+    	<p>Precipitation: {{detailObj?.currently?.precipIntensity}}</p>
+    	<p>Chance of Rain:{{detailObj?.currently?.precipProbability}}%</p>
+    	<p>Wind Speed:{{detailObj?.currently?.windSpeed}}mph</p>
+    	<p>Humidity: {{detailObj?.currently?.humidity}} %</p>
+    	<p>Visibility:{{detailObj?.currently?.visibility}} mi</p>
+    </div>
+	</div>
+
+</ng-template>
+
+<button [hidden]="true" id="hiddenButton" (click)="openModel(content)">Launch demo modal</button>
+
+
+<div id="chartContainer" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto; margin-top: 45px;"></div>

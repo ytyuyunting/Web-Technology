@@ -1,0 +1,68 @@
+#form{
+	width:850px;
+	margin: 20px auto;
+	background-color: #508CA5;
+	border:solid black 1px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px black;
+	color: white;
+}
+
+button{
+	border:solid 1px;
+}
+
+.btn{
+	background-color: white;
+}
+.btn:hover{
+	color:initial;
+	text-decoration: none;
+}
+
+#searchTitle{
+	margin:50px auto 30px auto;
+}
+
+.input{
+	border:solid 1px;
+}
+
+.col-form-label{
+	padding-left: 90px;
+}
+
+#p4{
+	padding-left: 90px;
+}
+
+#checkbox0{
+	border: 0px;
+}
+#p5{
+	padding-left: 90px;
+}
+#search{
+	margin:10px;
+}
+#clear{
+	margin:10px;
+}
+
+i{
+	vertical-align: middle;
+}
+
+#result{
+	margin: 20px;
+	background-color: #508CA5;
+	color: white;
+}
+
+#favorate{
+
+}
+
+#resultContainer{
+	text-align: center;
+}

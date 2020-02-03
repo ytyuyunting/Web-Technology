@@ -1,0 +1,67 @@
+<head>
+	<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+</head>
+
+
+<div *ngIf="submitted&&invalidAdd">Invalid Address</div>
+
+<div class="container" id="barContainer">
+  <div *ngIf="submitted&&(!invalidAdd)&&(!result)">
+  <p>
+    <ngb-progressbar type="info" [value]="50" [striped]="true"></ngb-progressbar>
+  </p>
+</div>
+</div>
+
+<div class="container" id="tabContainer" *ngIf="result&&(!invalidAdd)">
+  <div class="row justify-content-end" id="twitter-star">
+    <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text=The current temperature at+{{city}} is {{weaObj?.currently?.temperature}}%E2%84%89. The weather conditions are {{weaObj?.currently?.summary}}.&hashtags=CSCI571WeatherSearch"
+      data-size="large">
+    <img src="https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/images/Twitter_logo_blue_32.png"></a>
+  <div class="btn-group btn-group-toggle">
+    <label class="btn" ngbButtonLabel>
+      <input type="checkbox" ngbButton [(ngModel)]="share" (click)= "modifyFaverate()" > <i class="material-icons" id="star">{{starsrc}}</i>
+    </label>
+  </div>
+
+  </div>
+  
+  <ngb-tabset *ngIf="result&&(!invalidAdd)">
+  <ngb-tab title="Current">
+    <ng-template ngbTabContent>
+      <app-current-card></app-current-card>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle>Hourly</ng-template>
+    <ng-template ngbTabContent>
+      <app-hourly-chart [weaObj]="weaObj"></app-hourly-chart>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Weekly">
+    <ng-template ngbTabContent>
+      <app-weekly-chart [weaObj]="weaObj" [city]= "city"></app-weekly-chart>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+</div>
+
+
+
+

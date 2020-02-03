@@ -1,0 +1,31 @@
+<div class="container" id="cardContainer">
+	<div class="card bg-info text-black " id="card">
+	<div class="card-body" id="card-body">
+		<h2 style="margin-left: 15px;" class="card-title">{{city}}</h2>
+		<h3 style="margin-left: 15px;" class="card-subtitle mb-2 text-muted">{{weaObj?.timezone}}</h3>
+		<h2 class="card-title" style="margin-top: 10px; margin-bottom: 15px; margin-left: 15px;">{{weaObj?.currently?.temperature.toFixed()}}<img src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png"><p style="display: inline">F</p></h2>
+		<h4 style="margin-left: 15px;" class="card-title">{{weaObj?.currently?.summary}}</h4>
+		<img class="seal" src="{{sealObj?.items[0]?.link}}">
+	<table><tbody>
+		<tr>
+			<td><img data-toggle="tooltip" data-placement="top" title="Humidity" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-16-512.png"></td>
+			<td><img data-toggle="tooltip" data-placement="top" title="Pressure" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-25-512.png"></td>
+			<td><img data-toggle="tooltip" data-placement="top" title="Wind Speed" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-27-512.png"></td>
+			<td><img data-toggle="tooltip" data-placement="top" title="Visibility" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-30-512.png"></td><td><img data-toggle="tooltip" data-placement="top" title="CloudCover" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-28-512.png"></td>
+			<td><img data-toggle="tooltip" data-placement="top" title="Ozone" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-24-512.png"></td>
+		</tr>
+			<tr>
+				<td>{{weaObj?.currently?.humidity}}</td>
+				<td>{{weaObj?.currently?.pressure}}</td>
+				<td>{{weaObj?.currently?.windSpeed}}</td>
+				<td>{{weaObj?.currently?.visibility}}</td>
+				<td>{{weaObj?.currently?.cloudCover}}</td>
+				<td>{{weaObj?.currently?.ozone}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</div>
+
+
+</div>
