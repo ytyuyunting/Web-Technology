@@ -58,7 +58,7 @@ app.get('/autoComplete', function(req, res) {
 	var inputCity = req.query.inputCity;
 	var googleGeoUrl_orign="https://maps.googleapis.com/maps/api/place/autocomplete/json?input=";
 	googleGeoUrl_orign += inputCity;
-	googleGeoUrl_orign += "&types=(cities)&language=en&key=AIzaSyCgSDm9h6YcUm37J5k9gxJzp7KbWWAKZLY";
+	googleGeoUrl_orign += "&types=(cities)&language=en&key=????????????????????xxxxxxx";
 	var googleGeoUrl =encodeURI(googleGeoUrl_orign);
 	var request = require("request");
 	request(googleGeoUrl, function(error, response, body) {
@@ -75,7 +75,7 @@ app.get('/seal', function(req, res) {
 	var inputState = req.query.inputState;
 	var googleGeoUrl_orign="https://www.googleapis.com/customsearch/v1?q=";
 	googleGeoUrl_orign += inputState;
-	googleGeoUrl_orign += " State Seal&cx=010087039606304166579:6ewcnkzr19q&imgSize=huge&imgType=news&num=1&searchType=image&key=AIzaSyAmpNys7REGC6k_YbDxpbk0FZDsNeAAFBs";
+	googleGeoUrl_orign += " State Seal&cx=010087039606304166579:6ewcnkzr19q&imgSize=huge&imgType=news&num=1&searchType=image&key=xxxxxxxxxxxxxxxxxxxxxx";
 	console.log(googleGeoUrl_orign);
 	var googleGeoUrl =encodeURI(googleGeoUrl_orign);
 	var request = require("request");
@@ -125,7 +125,7 @@ app.get('/location', function(req, res) {
 	var city = req.query.city;
 	var state = req.query.state;
 	var address= ""+ street+ ","+ city +"," +state;
-	var googleGeoUrl_orign="https://maps.googleapis.com/maps/api/geocode/json?address="+ address+ "&key=AIzaSyA6RvecEUdcr-L2y2jhgZm4kAC48R5oztw";
+	var googleGeoUrl_orign="https://maps.googleapis.com/maps/api/geocode/json?address="+ address+ "&key=w";
 	var googleGeoUrl =encodeURI(googleGeoUrl_orign);
 	var lat="";
 	var lng ="";
