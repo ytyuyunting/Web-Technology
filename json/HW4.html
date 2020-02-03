@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Input Json</title>
+<style type="text/css">
+ 	div{ 
+ 		margin-top: 200px;	
+ 		text-align: center;
+ 		font-family: "Libre Baskerville";
+ 		font-weight: bold;
+ 		line-height: 40px;
+ 	}
+ 	#URL{
+            border: 1px solid blue;
+        }
+</style>
+
+</head>
+<body>
+
+	<div><form name="free">
+		Enter URL for largest manufactures by production(2017) List JSON File<br>
+   		<input id="URL" name="URL" type="text"/><br>
+   		<input name="Submit" type="button" value="Submit Query" onClick="openWin()"/>
+  	</form></div>
+    <table id="table1" border="1"></table>
+    <script type="text/javascript"> 
+	  var URL;
+	  var err=true;  
+	  function check(){
+		if(URL.length==0){
+ 		alert("Error! The input is empty.");
+  		document.free.URL.focus();
+ 		err= false;
+  		}
+  		else{err=true;}
+  		return err;
+	}
+	var jsonStr;
+    var jsonArr;
+    function readJson(){
+    	URL = document.getElementById("URL").value;
+     	function loadJson (url) {
+      	var xmlhttp = new XMLHttpRequest();
+      	try {
+      		xmlhttp.open("GET",url,false);//open, send, responseText are
+      		xmlhttp.send(); //properties of XMLHTTPRequest
+     		jsonStr=xmlhttp.responseText;
+      		
+      	}
+      	catch (Error){
+      		alert("Error! The file doesn't exist!");
+        } 
+        finally{return jsonStr;}
+      	
+    	}
+    	loadJson(URL);
+     	try {
+     		   jsonArr = JSON.parse(jsonStr); 
+     		}
+     	catch (Error) {
+    	  alert("Error! The file doesn't exist!");
+    	  err=false;
+    	}   
+   }
+   var headArray = [];
+   var head,table;
+  
+   	function generateHTML(jsonArr) {
+		
+		html_text="<!DOCTYPE html><html><body onload><table border='1'>"
+		head= jsonArr.Mainline.Table.Header.Data;
+      	for ( var i in head) { 
+                                headArray[headArray.length] = head[i]; 
+                         } 
+      	html_text+="<tbody>";
+        html_text+="<tr>"; 
+		for ( var j = 0; j < headArray.length; j++) { 
+                html_text+="<th>"+headArray[j]+"</th>";
+            } 
+        html_text+="</tr>";
+         
+        for ( var i = 0; i < headArray.length; i++) { 
+                  html_text+="<tr>"; 
+                  try{
+                  	var temp= jsonArr.Mainline.Table.Row[i];
+                  }
+                  catch(Error){
+                  	alert("Error! There is no car manufacturers in the file!");
+    	            err=false;
+    	            i=headArray.length;
+                  }
+                  for (var j in temp){
+                    if(j=="Logo"){
+                      html_text+="<td><img src='"+temp[j]+"' style='margin-left: auto;margin-right: auto;height='225px' width='225px'></td>";
+                    	}
+                    else if(j=="HomePage"){
+                    	html_text+= "<td><a href='"+temp[j]+"'>"+temp[j]+"</a></td>";
+                    	}
+                    else if(j=="Hubs"){
+                    	   html_text+="<td><ul>";
+                    	   if(temp[j].Hub[0].length!=0){
+                    	   html_text+= "<li style='font-weight:bold;'>"+temp[j].Hub[0]+"</li>";}
+                    	   if(temp[j].Hub[1].length!=0){
+                          html_text+="<li>"+temp[j].Hub[1]+"</li>";}
+                          html_text+="</ul></td>";  	 
+                    	}
+                    	else{
+                     	 html_text+="<td>"+temp[j]+"</td>";
+                    	}
+                    }
+
+                  html_text+="</tr>";                    
+                  } 
+        html_text+="</tbody>";
+        html_text+="</table>";           
+        html_text+="</html>";
+
+		}
+
+	function openWin(){
+	jsonstr=null;
+	jsonArr=[];
+	headArray = [];
+	head =null;		
+	if(check()){
+		readJson();
+		if(err){
+			generateHTML(jsonArr);
+			if(err){
+			var win = window.open("",'_blank','height=600,width=1500,top=100,toolbar=no,left=0,menubar=no,scrollbars=yes,status=no');
+			win.document.write(html_text);
+			win.document.close();
+			}
+		}
+        
+	}
+}
+		
+
+ </script>
+</body>
+</html>
+
